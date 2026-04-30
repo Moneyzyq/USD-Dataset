@@ -11,7 +11,7 @@ The dataset is divided into four subsets:
 - **USD-VDO**: Underwater Structure Defect Dataset without Suspended Impurities
 - **USD-VDW**: Underwater Structure Defect Dataset with Suspended Impurities
 
-The USD dataset supports the evaluation of impurity localization, underwater structure defect detection, and the complete E-D cascaded framework.
+The USD dataset supports the evaluation of suspended impurity localization, underwater structure defect detection, and the complete E-D cascaded framework.
 
 ---
 
@@ -48,7 +48,7 @@ This subset is mainly used for:
 
 **USD-RSI** comprises 14 sets of underwater structural videos captured in real-world underwater environments containing naturally occurring suspended impurities.
 
-Unlike USD-SSI, the suspended impurities in USD-RSI are naturally present during data acquisition. Therefore, this subset provides a more realistic benchmark for evaluating detection algorithms under complex underwater conditions.
+Unlike USD-SSI, the suspended impurities in USD-RSI are naturally present during data acquisition. Therefore, this subset provides a realistic benchmark for evaluating detection algorithms under complex underwater conditions.
 
 This subset is mainly used for:
 
@@ -92,6 +92,7 @@ The recommended directory structure of the dataset is as follows:
 
 ```text
 USD/
+├── README_DATASET.md
 ├── USD-SSI/
 │   ├── original_videos/
 │   ├── impurity_videos/
@@ -100,6 +101,7 @@ USD/
 │
 ├── USD-RSI/
 │   ├── videos/
+│   └── metadata.csv
 │
 ├── USD-VDO/
 │   ├── images/
@@ -110,4 +112,153 @@ USD/
 │   ├── original_frames/
 │   ├── e_procedure_results/
 │   ├── defect_annotations/
-└── 
+│   └── metadata.csv
+│
+├── file_list.csv
+├── train_val_test_split.csv
+└── SHA256SUMS.txt
+```
+
+---
+
+## Annotation Format
+
+The dataset provides manually labeled ground truth annotations for underwater structure surface defects.
+
+The default annotation format is binary mask format:
+
+- Pixel value `0`: background
+- Pixel value `255`: defect region
+
+For video-based subsets, masks and annotations are aligned with the corresponding video frames by frame index.
+
+If polygon, COCO, YOLO, or other annotation formats are used in your version of the dataset, please refer to:
+
+```text
+annotations/annotation_format.md
+```
+
+---
+
+## Download
+
+The complete USD dataset is available at Zenodo:
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19914976.svg)](https://doi.org/10.5281/zenodo.19914976)
+
+- **Zenodo DOI**: `10.5281/zenodo.19914976`
+- **GitHub Repository**: `https://github.com/your-username/USD-Dataset`
+
+Please replace the placeholder GitHub URL with the final public repository link after publication.
+
+---
+
+## Recommended Evaluation Tasks
+
+The USD dataset can be used for the following research tasks:
+
+1. **Suspended impurity localization**  
+   USD-SSI provides synthetic suspended-impurity videos and corresponding impurity masks for evaluating impurity localization accuracy.
+
+2. **Underwater structure defect detection without suspended impurities**  
+   USD-VDO can be used to evaluate defect detection methods under relatively clean underwater conditions.
+
+3. **Underwater structure defect detection with synthetic suspended impurities**  
+   USD-SSI can be used to evaluate the robustness of defect detection methods under synthetic impurity interference.
+
+4. **Underwater structure defect detection with real suspended impurities**  
+   USD-RSI and USD-VDW can be used to evaluate detection algorithms under real underwater environments containing naturally occurring suspended impurities.
+
+5. **Evaluation of the complete E-D cascaded framework**  
+   USD-VDW can be used to evaluate the complete E-D framework, including suspended-impurity mitigation and defect detection.
+
+---
+
+## Citation
+
+If you use this dataset in your research, please cite the associated paper and this dataset.
+
+```bibtex
+@dataset{usd_dataset_2026,
+  title        = {USD: Underwater Structure Defect Dataset with Suspended Impurities},
+  author       = {Author One and Author Two and Author Three},
+  year         = {2026},
+  version      = {1.0},
+  publisher    = {Zenodo},
+  url          = {https://github.com/your-username/USD-Dataset},
+  doi          = {10.5281/zenodo.19914976}
+}
+```
+
+If the dataset is associated with a paper, please also cite:
+
+```bibtex
+@article{your_paper_2026,
+  title   = {Your Paper Title},
+  author  = {Author One and Author Two and Author Three},
+  journal = {Journal Name},
+  year    = {2026}
+}
+```
+
+---
+
+## License
+
+This dataset is released for academic research purposes.
+
+Recommended license:
+
+```text
+Creative Commons Attribution-NonCommercial 4.0 International License
+CC BY-NC 4.0
+```
+
+Users are allowed to use, share, and adapt the dataset for non-commercial research purposes, provided that proper credit is given to the authors.
+
+Commercial use is not permitted without prior permission from the authors.
+
+For more details, please refer to the `LICENSE` file.
+
+---
+
+## Terms of Use
+
+By downloading or using the USD dataset, users agree to the following terms:
+
+1. The dataset may only be used for academic research and educational purposes.
+2. The dataset may not be used for commercial purposes without permission.
+3. The dataset may not be redistributed without proper citation and permission.
+4. Users must cite the associated paper and this dataset when using it in publications.
+5. The authors are not responsible for any misuse of the dataset.
+
+---
+
+## Contact
+
+For questions about the USD dataset, please contact:
+
+```text
+Name: Your Name
+Email: your_email@example.com
+Institution: Your Institution
+```
+
+You are also welcome to open an issue in this repository.
+
+---
+
+## Acknowledgements
+
+We thank all contributors involved in underwater data collection, impurity sample extraction, annotation, and dataset organization.
+
+This dataset is intended to support research on underwater structure defect detection, underwater image understanding, and robust visual perception in complex underwater environments.
+
+---
+
+## Updates
+
+| Date | Version | Description |
+|---|---|---|
+| 2026-04-30 | v1.0 | Initial release of the USD dataset |
+
