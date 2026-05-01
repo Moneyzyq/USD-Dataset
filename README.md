@@ -101,7 +101,6 @@ USD/
 │
 ├── USD-RSI/
 │   ├── videos/
-│   └── metadata.csv
 │
 ├── USD-VDO/
 │   ├── images/
@@ -112,32 +111,8 @@ USD/
 │   ├── original_frames/
 │   ├── e_procedure_results/
 │   ├── defect_annotations/
-│   └── metadata.csv
-│
-├── file_list.csv
-├── train_val_test_split.csv
-└── SHA256SUMS.txt
+└── 
 ```
-
----
-
-## Annotation Format
-
-The dataset provides manually labeled ground truth annotations for underwater structure surface defects.
-
-The default annotation format is binary mask format:
-
-- Pixel value `0`: background
-- Pixel value `255`: defect region
-
-For video-based subsets, masks and annotations are aligned with the corresponding video frames by frame index.
-
-If polygon, COCO, YOLO, or other annotation formats are used in your version of the dataset, please refer to:
-
-```text
-annotations/annotation_format.md
-```
-
 ---
 
 ## Download
@@ -147,9 +122,6 @@ The complete USD dataset is available at Zenodo:
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19914976.svg)](https://doi.org/10.5281/zenodo.19914976)
 
 - **Zenodo DOI**: `10.5281/zenodo.19914976`
-- **GitHub Repository**: `https://github.com/your-username/USD-Dataset`
-
-Please replace the placeholder GitHub URL with the final public repository link after publication.
 
 ---
 
@@ -174,34 +146,6 @@ The USD dataset can be used for the following research tasks:
 
 ---
 
-## Citation
-
-If you use this dataset in your research, please cite the associated paper and this dataset.
-
-```bibtex
-@dataset{usd_dataset_2026,
-  title        = {USD: Underwater Structure Defect Dataset with Suspended Impurities},
-  author       = {Author One and Author Two and Author Three},
-  year         = {2026},
-  version      = {1.0},
-  publisher    = {Zenodo},
-  url          = {https://github.com/your-username/USD-Dataset},
-  doi          = {10.5281/zenodo.19914976}
-}
-```
-
-If the dataset is associated with a paper, please also cite:
-
-```bibtex
-@article{your_paper_2026,
-  title   = {Your Paper Title},
-  author  = {Author One and Author Two and Author Three},
-  journal = {Journal Name},
-  year    = {2026}
-}
-```
-
----
 
 ## License
 
@@ -234,27 +178,6 @@ By downloading or using the USD dataset, users agree to the following terms:
 
 ---
 
-## Contact
-
-For questions about the USD dataset, please contact:
-
-```text
-Name: Your Name
-Email: your_email@example.com
-Institution: Your Institution
-```
-
-You are also welcome to open an issue in this repository.
-
----
-
-## Acknowledgements
-
-We thank all contributors involved in underwater data collection, impurity sample extraction, annotation, and dataset organization.
-
-This dataset is intended to support research on underwater structure defect detection, underwater image understanding, and robust visual perception in complex underwater environments.
-
----
 
 ## Updates
 
