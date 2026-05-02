@@ -13,6 +13,16 @@ The dataset is divided into four subsets:
 
 The USD dataset supports the evaluation of suspended impurity localization, underwater structure defect detection, and the complete E-D cascaded framework.
 
+
+<p align="center">
+  <img src="usd_dataset_overview.png" width="900">
+</p>
+
+<p align="center">
+  <b>Figure 1.</b> Overview of the USD dataset.
+</p>
+
+
 ---
 
 ## Dataset Composition
