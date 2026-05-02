@@ -15,7 +15,7 @@ The USD dataset supports the evaluation of suspended impurity localization, unde
 
 
 <p align="center">
-  <img src="usd_dataset_overview.png" width="900">
+  <img src="USD_preview.png" width="900">
 </p>
 
 <p align="center">
