@@ -2,7 +2,17 @@
 
 ## Overview
 
-The **USD dataset** is designed for underwater structure surface defect detection under suspended-impurity interference. It provides videos, images, impurity masks, defect annotations, and E-procedure processed results for evaluating underwater structure defect detection methods in both synthetic and real-world underwater environments.
+---
+
+The **USD dataset** is designed for evaluating underwater structure surface defect detection under suspended-impurity interference, with support for suspended-impurity mitigation or elimination (**E-procedure**), defect detection (**D-procedure**), and the complete **two-stage cascaded framework**.
+
+The **E-procedure** is designed to mitigate suspended-impurity interference in underwater videos. It aims to reduce particle-induced occlusion and visual disturbance, recover reliable underwater structural surface information, and provide enhanced inputs for subsequent defect detection.
+
+The **D-procedure** is used for underwater structure defect detection. It takes underwater images, original frames, or E-procedure processed results as input and predicts defect regions on structural surfaces.
+
+The **cascaded framework** first applies the E-procedure to suppress suspended-impurity interference and then applies the D-procedure to detect surface defects. This cascaded strategy is designed to improve defect detection robustness in complex underwater environments.
+
+It provides videos, images, impurity masks, defect annotations, and E-procedure processed results for evaluating underwater structure defect detection methods in both synthetic and real-world underwater environments.
 
 The dataset is divided into four subsets:
 
@@ -10,8 +20,6 @@ The dataset is divided into four subsets:
 - **USD-RSI**: Real Suspended Impurities
 - **USD-VDO**: Underwater Structure Defect Dataset without Suspended Impurities
 - **USD-VDW**: Underwater Structure Defect Dataset with Suspended Impurities
-
-The USD dataset supports the evaluation of suspended impurity localization, underwater structure defect detection, and the complete E-D cascaded framework.
 
 
 <p align="center">
@@ -90,7 +98,7 @@ This subset contains corresponding E-procedure processed results and manually la
 
 This subset is mainly used for:
 
-- Evaluation of the complete E-D cascaded framework
+- Evaluation of the complete cascaded framework
 - Defect detection under real suspended-impurity interference
 - Comparison between original frames and E-procedure enhanced results
 
@@ -114,13 +122,12 @@ USD/
 │
 ├── USD-VDO/
 │   ├── images/
-│   ├── defect_masks/
-│   └── annotations/
+│   └── defect_masks/
 │
 ├── USD-VDW/
 │   ├── original_frames/
 │   ├── e_procedure_results/
-│   ├── defect_annotations/
+│   └── defect_annotations/
 └── 
 ```
 ---
@@ -151,8 +158,8 @@ The USD dataset can be used for the following research tasks:
 4. **Underwater structure defect detection with real suspended impurities**  
    USD-RSI and USD-VDW can be used to evaluate detection algorithms under real underwater environments containing naturally occurring suspended impurities.
 
-5. **Evaluation of the complete E-D cascaded framework**  
-   USD-VDW can be used to evaluate the complete E-D framework, including suspended-impurity mitigation and defect detection.
+5. **Evaluation of the complete cascaded framework**  
+   USD-VDW can be used to evaluate the complete cascaded framework, including suspended-impurity mitigation and defect detection.
 
 ---
 
